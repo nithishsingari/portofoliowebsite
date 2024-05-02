@@ -1,0 +1,313 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+}
+#protofolio{
+    align-items: center;
+    position: fixed;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background:black;
+    color:#fff;
+}
+#header{
+    width:100%;
+    height:100vh;
+    background-image: url("background1.png");
+    background-size:cover;
+    background-positon:center;
+}
+.container{
+    padding: 10px 10%;
+}
+nav{
+    dispaly:flex;
+    align-items:center;
+    justify-content:space-between;/*it is for equal space*/
+    position:fixed;
+    top:0;
+    right:0;
+}
+.logo{
+
+    width:140px;
+    top:0;
+    left: 0;
+    position: fixed;
+    border-radius: 10px; 
+}
+/*new*/
+.logo-container {
+    position: relative;
+    overflow: hidden;
+    width: 0;
+    height: 0px;
+  }
+  
+  .logo {
+
+    transition: transform 0.3s, filter 0.3s;
+  }
+  
+  .logo:hover {
+    transform: scale(1.2);
+    filter: grayscale(0) brightness(1.2);
+    color: red;
+  }
+/* i am new tag*/
+#ja{
+    align-items: left;
+    top: 0;
+    left: 0;
+}
+nav ul li{
+    display:inline-block;
+    list-style:none;
+    margin:10px 20px;
+}
+nav ul li a{
+    color:#fff;
+    text-decoration: none;/*remove for under line*/
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content:'';
+    width: 100%;
+    height: 3px;
+  /*background:#ff004f;*/
+    position: absolute;
+    left:0;
+    bottom:-6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text h1{
+    font-size:60px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+ color: #ff004f;
+}
+/*---------------about------------*/
+#about{
+    padding: 80px 0;
+    color:#ababab;
+}
+.row{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+.about-col-1{
+    flex-basis:35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 60;
+    color: orange;
+}
+.tab-tittle{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right:50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: relative;
+}
+.tab-linl::after{/*it is for edu,exp,skill link purpose*/
+    content:'0';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    background: #ff0000;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-linkactive-link::after{
+width: 50%;
+}
+.tab-contents
+{
+    list-style:none;
+    margin:10px 0;
+}
+.tab-contents ul li span{/*it is for color purpuse*/
+ color:orange;
+ font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+.details{
+    diaplay:none;
+}
+/*----------------services-----*/
+#services{
+    padding: 30px 0;
+}
+.services-list{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div{
+    background:#262626;
+    padding: 40px;
+    font-size:13px;
+    font-weight:300;
+    border-radius: 10px;/* radius for border in round*/
+    transition:  background- 0.5s, transform 0.5s;/*it is for my services coloring with 0.5 sec*/
+}
+/*----------increasing for symbols-------*/
+.services-list div i{
+    font-size: 50px;
+    margin-bottom:30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight:500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size:12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+     background: #ff004f;
+     transform: translate(-10px);
+}
+/*------------------portofilo-----------------*/
+#portofilo{
+    padding:50px 0;
+}
+/*images for work 1,2,3 are arranging in horizantal*/
+.work-list{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border: radius 10px;
+    position:relative;
+    overflow: block;
+}
+.work img{
+    width: 100%;
+    border-radius:10px;
+    display:block;
+    transform: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border: radius 10px;
+    position: absolute;
+    left:0;
+    bottom:0;
+    overflow: hidden;
+    display:flex;
+    align-items:center ;
+    justify-content: center;
+    flex-direction:column;
+    padding: 0 40px;
+    text-align: center;
+    font-size:14px;
+    transition:height 0.5s;
+}
+.layer h3{
+    font-weight:500px;
+    margin-bottom: 20px;
+}
+/* below layer a for link symbol for goodness */
+.layer a{
+    margin-top:20px;
+    color:#ff004f;
+    text-decoration:none;
+    font-size:18px;
+    line-height:60px;
+    background:#fff;
+    width: 60px;
+    height:60px
+    border-radius : 50%;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height:100%;
+}
+/* it is for the contact right side -- designing in vertical shape---*/
+.contact-left{
+    flex-basis: 35%;
+    font-size: 100%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.nithish{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;/*it is for rectangle shape for thanks*/
+    margin-top: 20px;
+}
+/*----------css for small screens----*/
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url('phone-background.png');
+
+    }
+    .header-text {
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font: size 30px;
+    }
+    nav .fas{
+     display: block;
+     font-size:25px;
+    }
+    nav ul{
+        background: #ff004f;
+        position:fixed;
+        top:0;
+        right:0;
+        width:200px;
+        height: 100hv;
+        padding-top:50px
+    
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    
+}
